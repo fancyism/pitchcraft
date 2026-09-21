@@ -227,7 +227,6 @@
       "content": [
         { "kind": "quote", "text": "Build this as a reusable AI presentation engine, not a one-off slide generator.", "attribution": "PitchCraft specification — Final Mandate" }
       ],
-      "sources": ["spec Final Mandate"],
       "speaker_notes": "The spec's own words. This is the standard the repo holds itself to."
     },
     {
