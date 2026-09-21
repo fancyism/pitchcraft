@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/kanomwhandev/pitchcraft/schemas/deck.schema.json",
+  "$id": "https://github.com/fancyism/pitchcraft/schemas/deck.schema.json",
   "title": "PitchCraft Deck DSL",
   "description": "Canonical intermediate representation. Content is separated from presentation rendering so a deck stays portable across HTML, PPTX, PDF and image renderers. Validate with scripts/validate_deck.py (stdlib-only) or any JSON Schema tooling.",
   "type": "object",

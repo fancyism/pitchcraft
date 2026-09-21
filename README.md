@@ -32,7 +32,7 @@ sources/ → ingest → story → slide plan → deck.json (Slide DSL)
 ## Install (any agent, via skills CLI)
 
 ```bash
-npx skills add kanomwhandev/pitchcraft
+npx skills add fancyism/pitchcraft
 ```
 
 Or clone and point your agent at the folder. Manual: copy this repo into
@@ -54,7 +54,7 @@ DSL, renders, QA-loops, exports.
 ## Demo
 
 - Rendered demo deck (built by PitchCraft from its own spec):
-  **https://kanomwhandev.github.io/pitchcraft/** — redirects to the deck
+  **https://fancyism.github.io/pitchcraft/** — redirects to the deck
 - Worked example: [`examples/pitchcraft-demo/`](examples/pitchcraft-demo/)
 
 ## Pipeline at a glance

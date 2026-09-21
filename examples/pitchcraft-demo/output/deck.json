@@ -258,7 +258,7 @@
       "visual_strategy": "typography-only",
       "content": [
         { "kind": "steps", "items": [
-          { "label": "Install", "title": "npx skills add kanomwhandev/pitchcraft", "text": "Any skills-compatible agent" },
+          { "label": "Install", "title": "npx skills add fancyism/pitchcraft", "text": "Any skills-compatible agent" },
           { "label": "Run", "title": "\"Create a 12-slide deck from this workspace\"", "text": "Audience, goal, style — the pipeline does the rest" },
           { "label": "Keep", "title": "deck.json stays yours", "text": "The DSL is the deliverable; formats are views" }
         ]}

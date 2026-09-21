@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/kanomwhandev/pitchcraft/schemas/slide.schema.json",
+  "$id": "https://github.com/fancyism/pitchcraft/schemas/slide.schema.json",
   "title": "PitchCraft Slide DSL",
   "type": "object",
   "required": ["id", "type", "purpose", "message", "title", "layout_family", "visual_strategy", "content"],
