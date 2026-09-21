@@ -27,8 +27,13 @@ node scripts/export_pptx.mjs <ws>/output/deck.json      # optional; npm i pptxge
 Workspace convention (any subset; Phase 0 discovers what exists):
 `sources/ fonts/ brand/ references/ assets/ data/ output/` +
 `config/` (deck.config.yaml, brand.yaml, design-rules.md,
-style-presets/) + `templates/` (DSL presets per layout family) —
-copy from `templates/workspace/` to bootstrap a new workspace.
+style-presets/) + `templates/` (DSL presets per layout family) — copy
+from `templates/workspace/` or scaffold via the CLI below.
+
+Users scaffold a workspace (BMad-style interview) with
+`npx github:fancyism/pitchcraft init` — it scaffolds config/, templates/,
+folders and a START.md with the exact prompt to give you. When you find a
+START.md or config/deck.config.yaml in the project, treat it as the brief.
 
 ## Pipeline — run in order, checkpoint artifacts into output/
 

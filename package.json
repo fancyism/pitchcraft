@@ -1,6 +1,6 @@
 {
-  "name": "pitchcraft",
-  "version": "1.0.0",
+  "name": "pitchcraft-cli",
+  "bin": { "pitchcraft": "bin/pitchcraft.js" },
   "description": "Marketing presentation engine for AI agents — sources in, validated Slide DSL and rendered decks out",
   "type": "module",
   "license": "MIT",

@@ -44,20 +44,34 @@ spine), no accountability (numbers without sources), no inspection
   enforced, PPTX maps to Leelawadee UI
 - **8 reference docs + 2 worked examples** — see below
 
-## Install
+## Install & first deck (BMad-style flow)
+
+**1 · Scaffold a workspace in your project** (interview asks 8 short
+questions, then builds the full workspace: config, brand, templates,
+style presets, START.md with a copy-paste prompt for your agent):
+
+```bash
+npx github:fancyism/pitchcraft init          # interactive (th/en)
+npx github:fancyism/pitchcraft init --yes    # defaults, zero prompts
+npx github:fancyism/pitchcraft check         # workspace readiness
+```
+
+**2 · Install the skill into your agent** (once per machine):
 
 ```bash
 npx skills add fancyism/pitchcraft
 ```
 
-Then tell your agent, in any workspace with material to present:
+**3 · Drop your material into `sources/`** (PDF/DOCX/CSV/MD + optional
+`fonts/`, `brand/`, `data/`) and tell your agent:
 
-> Create a 12-slide presentation from this workspace. Audience: SME
-> business owners. Goal: explain GEO and AI search. Use the brand assets
-> and fonts in this project. Style: editorial. Export HTML, PPTX, PDF.
+> สร้าง presentation จาก workspace นี้ (pitchcraft/) ด้วย PitchCraft —
+> ผู้ฟัง, เป้าหมาย, style ตาม config — Export HTML, PPTX, PDF + previews
+
+The interview pre-fills `config/deck.config.yaml`; every later edit
+happens in `config/`, never in generated files.
 
 ## Demos (both built by PitchCraft, both live)
-
 - **English** — PitchCraft pitches itself from its own spec, every claim
   citing a spec section:
   https://fancyism.github.io/pitchcraft/examples/pitchcraft-demo/output/deck.html

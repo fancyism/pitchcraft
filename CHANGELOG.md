@@ -1,4 +1,15 @@
 # Changelog
+## v2.1 — 2026-09-21 — BMad-style installer
+
+Added `bin/pitchcraft.js` (zero-dep Node CLI):
+- `init [dir]` — interactive interview (th/en, 8 questions) scaffolds a
+  full presentation workspace: folders, config/deck.config.yaml +
+  brand.yaml pre-filled from answers, design rules, 5 style presets,
+  6 template families, START.md with a copy-paste agent prompt;
+  `--yes` / `--style= --lang= --title= --audience= --slides=` flags;
+  piped-stdin safe for CI
+- `check [dir]` — workspace readiness report
+- Run without npm publish: `npx github:fancyism/pitchcraft <cmd>`
 
 ## v2 — 2026-09-22 — Workspace config, templates, font strategy, Thai demo
 
