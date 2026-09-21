@@ -50,3 +50,15 @@ numbers set in the display face, tabular where available.
 One focal point per slide (`emphasis`): the eye should land title ->
 focal element -> support, in that order, in ~3 seconds. Whitespace is the
 cheapest hierarchy tool: when two elements compete, separate or demote one.
+
+## Font strategy chain (v2)
+
+preferred font -> installed/embedded check -> fallback stack -> PDF
+canonical. `scripts/check_fonts.py` scans `fonts/`, validates
+`theme.typography.custom_fonts`, and writes `output/font-strategy.json`:
+what gets base64-embedded in deck.html, which safe stack PPTX uses
+(Thai decks map to Leelawadee UI/Noto Sans Thai — recipients are not
+assumed to own your fonts), and whether PDF should be the canonical
+visual export. Variable fonts: declare the full weight range, e.g.
+`"weight": "100 900"`. Headline->vector conversion is a documented
+concept only — never convert body text (editability wins).

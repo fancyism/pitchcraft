@@ -1,61 +1,70 @@
 # PitchCraft — Marketing Presentation Engine
 
-An agent skill that turns a project workspace into a marketing-grade
-presentation: **sources, brand, fonts, data in → deck out.**
-
-PitchCraft treats a presentation as a structured visual communication
-system — not bullets on slides. Every slide has one primary communication
-job, a validated intermediate representation (the **Slide DSL**), a
-deterministic renderer, and a mandatory QA loop with claim provenance.
+Point your AI agent at a folder of sources. Get a marketing deck with a
+validated structure, real sources on every number, and a QA loop that
+catches broken slides before your audience does.
 
 ```
 sources/ → ingest → story → slide plan → deck.json (Slide DSL)
-        → theme+assets → render HTML/PPTX/PDF → visual QA → export
+        → theme + assets → render HTML/PPTX/PDF → visual QA → export
 ```
 
-## What you get
+## Why it's different
 
-- **SKILL.md** — the agent-facing pipeline (works in Claude Code, Codex,
-  OpenCode, OMP, Cursor, or any agent that reads skills)
+Most AI decks fail the same three ways: no argument (bullets without a
+spine), no accountability (numbers without sources), no inspection
+(generated but never looked at). PitchCraft fixes all three structurally:
+
+- **One job per slide.** Every slide carries a written message in a
+  validated Slide DSL — if the sentence can't be stated, the slide isn't
+  designed yet.
+- **Every number has a source.** Claims map to provenance
+  (`sources-map.json`); charts cite on-slide. The validator and QA loop
+  enforce it.
+- **Nothing ships un-inspected.** The pipeline renders, screenshots and
+  checks every slide (overflow, contrast, rhythm, Thai tone marks) and
+  repairs before export.
+
+## What's in the box
+
+- **SKILL.md** — the agent-facing pipeline (Claude Code, Codex, OpenCode,
+  OMP, Cursor, any skills-compatible agent)
 - **Slide DSL** — `schemas/deck.schema.json` + `slide.schema.json`;
   content separated from presentation, portable across renderers
-- **`scripts/validate_deck.py`** — stdlib-only DSL validator + QA report
-- **`scripts/render_html.py`** — self-contained HTML deck: 16:9 canvas,
-  theme tokens, inline SVG charts, keyboard nav, speaker notes, print mode
-- **`scripts/export_pptx.mjs`** — editable PPTX (text/tables/charts stay
-  editable; requires `npm i pptxgenjs`)
-- **8 reference docs** — pipeline, DSL guide, slide taxonomy, visual
-  strategy, typography (incl. Thai rules), brand tokens, QA, craft methods
-- **`examples/pitchcraft-demo/`** — full worked example: sources →
-  deck.json → rendered deck → QA report
+- **Scripts (stdlib)** — `validate_deck.py` (schema + QA report),
+  `render_html.py` (self-contained deck.html: keyboard nav, speaker
+  notes, print-to-PDF), `check_fonts.py` (font strategy chain),
+  `export_pptx.mjs` (editable PPTX; needs `npm i pptxgenjs`)
+- **Workspace layer (v2)** — `templates/workspace/` with `config/`
+  (deck.config.yaml, brand.yaml, design-rules.md) + 5 style presets
+  (editorial · consulting · data · pitch · educational) + a `templates/`
+  DSL preset library (title, framework, comparison, timeline, data,
+  closing)
+- **Thai support** — Anuphan embedded end-to-end, line-height ≥ 1.25
+  enforced, PPTX maps to Leelawadee UI
+- **8 reference docs + 2 worked examples** — see below
 
-## Install (any agent, via skills CLI)
+## Install
 
 ```bash
 npx skills add fancyism/pitchcraft
 ```
 
-Or clone and point your agent at the folder. Manual: copy this repo into
-your skills directory (e.g. `.agents/skills/pitchcraft/`).
-
-## Use
-
-Tell your agent, in any workspace with material to present:
+Then tell your agent, in any workspace with material to present:
 
 > Create a 12-slide presentation from this workspace. Audience: SME
-> business owners. Goal: explain GEO and AI search. Use brand assets and
-> fonts in this project. Style: premium editorial consulting. Export HTML,
-> PPTX and PDF.
+> business owners. Goal: explain GEO and AI search. Use the brand assets
+> and fonts in this project. Style: editorial. Export HTML, PPTX, PDF.
 
-The agent runs the PitchCraft pipeline: discovers the workspace, ingests
-sources with provenance, picks a narrative spine, plans slides, writes the
-DSL, renders, QA-loops, exports.
+## Demos (both built by PitchCraft, both live)
 
-## Demo
-
-- Rendered demo deck (built by PitchCraft from its own spec):
-  **https://fancyism.github.io/pitchcraft/** — redirects to the deck
-- Worked example: [`examples/pitchcraft-demo/`](examples/pitchcraft-demo/)
+- **English** — PitchCraft pitches itself from its own spec, every claim
+  citing a spec section:
+  https://fancyism.github.io/pitchcraft/examples/pitchcraft-demo/output/deck.html
+- **Thai** — GEO for Thai SME owners, Anuphan variable font embedded,
+  every statistic URL-sourced:
+  https://fancyism.github.io/pitchcraft/examples/geo-sme-thai/output/deck.html
+- Landing: https://fancyism.github.io/pitchcraft/
 
 ## Pipeline at a glance
 
@@ -63,11 +72,11 @@ DSL, renders, QA-loops, exports.
 | --- | --- |
 | 0 discovery + tool check | workspace inventory |
 | 1 ingestion (distill, provenance) | `output/sources-map.json` |
-| 2 communication brief | `output/brief.md` |
-| 3 story architecture | narrative spine + emotional arc |
-| 4 slide plan (one job per slide) | `output/slide-plan.md` |
+| 2 brief | `output/brief.md` |
+| 3 story (spine + emotional arc) | narrative in deck.json |
+| 4 slide plan (from templates/) | `output/slide-plan.md` |
 | 5 Slide DSL | `output/deck.json` (validated) |
-| 6 theme tokens + assets | theme in deck.json |
+| 6 style preset + brand.yaml + fonts | theme + `font-strategy.json` |
 | 7 render | `output/deck.html` (+ PPTX/PDF) |
 | 8 QA loop (visual+content+deck) | `output/qa-report.md` |
 | 9 export + previews | `output/preview/*.png` |
@@ -75,11 +84,10 @@ DSL, renders, QA-loops, exports.
 ## Quality bar
 
 Professional consulting / premium editorial / startup strategy decks —
-never the stereotypical AI deck (giant title, three generic bullets,
-random illustration, same card grid on every slide). One message per
-slide; charts from real data with on-slide sources; Thai typography gets
-line-height >= 1.25 and no negative tracking.
+never giant-title-three-bullets AI filler. Charts from real data with
+on-slide sources. Image generators make images; the layout engine owns
+text and structure — never the whole slide.
 
 ## License
 
-MIT
+MIT · changelog: [CHANGELOG.md](CHANGELOG.md)

@@ -50,3 +50,12 @@ Text, Heading, Image, Icon, Divider, Badge, Metric, Chart, Diagram, Callout.
 Two decks from the same brand should share tokens and components so the
 second deck costs half the first. The CSS layer of the HTML renderer
 implements these primitives; reuse them before inventing new structure.
+
+## Workspace brand inputs (v2)
+
+`config/brand.yaml` is the primary input (identity, colors, typography,
+logo/icon/photography rules); `brand/palette.json` with the same color
+keys is accepted as an alternative. Resolution order: style preset
+(`config/style-presets/<name>.yaml`) -> brand.yaml overlay ->
+`config/design-rules.md` as deck-specific law. Record the chosen preset
+in `metadata.style_preset` so the chain stays auditable.

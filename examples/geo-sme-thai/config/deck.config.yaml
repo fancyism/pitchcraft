@@ -1,0 +1,30 @@
+# Workspace config — examples/geo-sme-thai (adapted from templates/workspace/config/)
+deck:
+  title: "GEO: ให้ AI พูดถึงร้านคุณ"
+  audience: "เจ้าของธุรกิจ SME ไทย ไม่จำเป็นต้องมีพื้น SEO"
+  objective: "ทำให้เข้าใจว่า GEO (การมองเห็นบน AI search) คืออะไร และเริ่มต้นยังไงได้ทันที"
+  desired_action: "เช็กชื่อร้านบน AI แล้วเริ่มทำข้อ 1 ของเช็กลิสต์ในสัปดาห์นี้"
+  style_preset: "editorial"
+  language: "th"
+  aspect_ratio: "16:9"
+  length: 10
+
+outputs: [html, pptx, pdf, previews]
+
+fonts:
+  directory: "fonts"
+  strategy: auto
+
+brand:
+  file: "config/brand.yaml"
+
+design_rules: "config/design-rules.md"
+templates: "../../../templates/workspace/templates"
+
+qa:
+  visual: true
+  content: true
+  ai_judgments: false
+
+sourcing:
+  web_verify: true

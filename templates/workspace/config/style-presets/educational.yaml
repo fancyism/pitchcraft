@@ -1,0 +1,19 @@
+# Style preset: educational — warm, high-legibility, teach-first
+name: educational
+colors:
+  primary: "#2D6A4F"
+  secondary: "#84A98C"
+  accent: "#E76F51"
+  surface: "#FDFBF7"
+  surface_alt: "#F0EEE4"
+  text: "#22333B"
+  text_muted: "#5F6C72"
+  border: "#E3E0D5"
+typography:
+  line_height_body: 1.6   # extra room for comprehension + Thai stacks
+  display_weight: 800
+  title_size: 42
+guidance: >-
+  Teach -> demonstrate -> apply spine; definitions before claims; process
+  flows over dense grids; checklist closing. Fits workshops, training,
+  explainers, carousels-turned-decks.

@@ -13,7 +13,7 @@ Validate with `scripts/validate_deck.py` (stdlib-only, mirrors the schemas).
 {
   "metadata": { "title": "...", "audience": "...", "objective": "...",
     "desired_action": "...", "language": "en", "aspect_ratio": "16:9",
-    "style": "premium editorial consulting" },
+    "style": "premium editorial consulting", "style_preset": "editorial" },
   "theme": { "colors": {}, "typography": {} },
   "narrative": { "structure": "Problem -> Insight -> Evidence -> Solution -> Action",
                  "arc": ["beat per slide, one entry per slide"] },

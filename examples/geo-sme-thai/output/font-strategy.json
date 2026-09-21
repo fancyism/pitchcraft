@@ -1,0 +1,39 @@
+{
+  "language": "th",
+  "thai_rules_applied": true,
+  "discovered": [
+    {
+      "name": "Anuphan.ttf",
+      "size_kb": 226.3
+    }
+  ],
+  "embed_into_html": [
+    {
+      "family": "Anuphan",
+      "path": "fonts/Anuphan.ttf",
+      "weight": "100 900",
+      "variable": true
+    }
+  ],
+  "pptx": {
+    "display": "'Leelawadee UI', 'Noto Sans Thai', 'Sukhumvit Set', Tahoma, sans-serif",
+    "body": "'Leelawadee UI', 'Noto Sans Thai', 'Sukhumvit Set', Tahoma, sans-serif",
+    "mono": "'Cascadia Code', Consolas, 'SF Mono', monospace"
+  },
+  "export_strategy": "pdf-canonical",
+  "fallback_chain": [
+    "preferred (custom_fonts)",
+    "embedded check (this report)",
+    "safe stack (pptx above)",
+    "PDF canonical export"
+  ],
+  "line_height_body": 1.6,
+  "notes": [
+    "PPTX cannot assume recipients own the custom fonts: deck.html/PDF is the visual canonical version; PPTX uses a safe stack and stays editable"
+  ],
+  "thai_rules": [
+    "line-height >= 1.25 everywhere (renderer enforces)",
+    "no negative letter-spacing on Thai text",
+    "word-boundary wrapping; check tone marks are not clipped"
+  ]
+}

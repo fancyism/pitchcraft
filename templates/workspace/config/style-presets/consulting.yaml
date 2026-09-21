@@ -1,0 +1,19 @@
+# Style preset: consulting — McKinsey-style structure, high scannability
+name: consulting
+colors:
+  primary: "#1F3A5F"
+  secondary: "#6E7F92"
+  accent: "#C0392B"
+  surface: "#FFFFFF"
+  surface_alt: "#F4F6F8"
+  text: "#1A1D21"
+  text_muted: "#5A6470"
+  border: "#DDE2E8"
+typography:
+  line_height_body: 1.5
+  display_weight: 800
+  title_size: 40
+guidance: >-
+  Action titles that state the takeaway sentence, framework grids,
+  labeled 2x2s, source line on every data slide. Density medium-high but
+  rule-driven. Fits advisory decks, audits, strategy memos.

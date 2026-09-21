@@ -1,0 +1,17 @@
+# DSL preset: closing/CTA family
+family: cta
+layout_family: closing-cta
+visual_strategy: typography-only
+density: sparse
+defaults:
+  eyebrow: ""
+skeleton:
+  - kind: steps
+    items:               # 2-3 next steps; first = the ask
+      - label: ""        # Install / เริ่มต้น / ติดต่อ
+        title: ""
+        text: ""
+hints: >-
+  One ask, stated as an imperative the audience can DO this week. Steps
+  are actions, not summary. Oversized statement type. Logo placement
+  allowed here and on the cover only (brand rules).

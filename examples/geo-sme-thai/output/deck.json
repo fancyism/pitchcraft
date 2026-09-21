@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "title": "GEO: ให้ AI พูดถึงร้านคุณ",
+    "audience": "เจ้าของธุรกิจ SME ไทย",
+    "objective": "เข้าใจ GEO และเริ่มต้นได้ทันทีในสัปดาห์นี้",
+    "desired_action": "เช็กชื่อร้านบน AI แล้วทำข้อ 1 ของเช็กลิสต์",
+    "tone": "เป็นกันเองแบบที่ปรึกษา",
+    "style": "editorial (Anuphan, Thai typography rules)",
+    "language": "th",
+    "style_preset": "editorial",
+    "source_provenance": "output/sources-map.json"
+  },
+  "theme": {
+    "colors": {
+      "primary": "#254741", "secondary": "#7A8B99", "accent": "#C46A2F",
+      "surface": "#FAF7F2", "surface_alt": "#F1ECE3",
+      "text": "#201D1A", "text_muted": "#6B645B", "border": "#E3DCD0"
+    },
+    "typography": {
+      "display": "'Anuphan', 'Noto Sans Thai', 'Leelawadee UI', sans-serif",
+      "body": "'Anuphan', 'Noto Sans Thai', 'Leelawadee UI', sans-serif",
+      "mono": "'Cascadia Code', Consolas, monospace",
+      "line_height_body": 1.6,
+      "custom_fonts": [
+        { "family": "Anuphan", "path": "fonts/Anuphan.ttf", "weight": "100 900" }
+      ]
+    }
+  },
+  "narrative": {
+    "structure": "Why -> What -> How -> Example -> Next step",
+    "arc": [
+      "hook: ชื่อเรื่องคือสัญญา",
+      "tension: ลูกค้าถาม AI ก่อน Google",
+      "stakes: 35% เริ่มที่ AI",
+      "evidence: zero-click",
+      "ความหมาย: SEO vs GEO",
+      "mechanism: AI อ้างอิงจากอะไร",
+      "reality: บันไดชื่อเสียง 73/44/11",
+      "solution: เริ่มจากของที่มี",
+      "execution: เช็กลิสต์ 5 ข้อ",
+      "ask: ทำข้อ 1 วันนี้"
+    ]
+  },
+  "slides": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "purpose": "hook-open",
+      "message": "เด็คนี้ทำให้ SME เข้าใจ GEO และเริ่มต้นได้ในสัปดาห์เดียว",
+      "eyebrow": "คู่มือฉบับเจ้าของร้าน",
+      "title": "GEO: ให้ AI พูดถึงร้านคุณ",
+      "subtitle": "การมองเห็นธุรกิจบน AI search — ทำไมมันสำคัญ และเริ่มยังไงได้ทันที",
+      "layout_family": "cover",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "text", "text": "10 สไลด์ · ตัวเลขจริงพร้อมแหล่งอ้างอิงทุกตัว" }
+      ],
+      "sources": ["sources/research-notes.md (web-verified 2026-09-22)"],
+      "speaker_notes": "เปิดด้วยคำถาม: สัปดาห์ก่อนมีคนถาม ChatGPTหาร้านแบบของเราไหม คำตอบคือมี และจะมากขึ้น"
+    },
+    {
+      "id": "ask-ai-first",
+      "type": "big-statement",
+      "purpose": "name-the-shift",
+      "message": "ลูกค้ากำลังถาม AI ก่อนถาม Google",
+      "title": "ลูกค้ากำลังถาม AI ก่อนถาม Google",
+      "layout_family": "statement",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "text", "text": "คำถามแบบใหม่คือ \"ร้านกาแฟดี ๆ ใกล้สีลม มีไหม\" — ถามในแชต ไม่ใช่พิมพ์ในช่องค้นหา และ AI ตอบด้วยชื่อ 3-5 ร้านเท่านั้น" }
+      ],
+      "sources": ["research-notes §1"],
+      "speaker_notes": "ให้ผู้ฟังนึกภาพคำถามจริงที่ลูกค้าเขาเจอ ไม่ต้องอธิบายนิยาม GEO ตรงนี้"
+    },
+    {
+      "id": "thirty-five",
+      "type": "big-number",
+      "purpose": "set-the-stakes",
+      "message": "35% ของผู้บริโภคเริ่มค้นพบสินค้าด้วย AI แล้ว",
+      "title": "35%",
+      "layout_family": "big-number",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "metrics", "items": [
+          { "value": "35%", "label": "ของผู้บริโภคสหรัฐฯ เริ่มขั้นค้นพบสินค้าด้วยเครื่องมือ AI", "source": "Similarweb via omnibound.ai" },
+          { "value": "13.6%", "label": "ที่ใช้เสิร์ชแบบเดิมเท่านั้น", "source": "Similarweb via omnibound.ai" }
+        ]},
+        { "kind": "text", "text": "ตัวเลขจากตลาดสหรัฐฯ — ใช้ดูแนวโน้ม ตลาดไทยกำลังเดินตามทางเดียวกัน" }
+      ],
+      "sources": ["research-notes §1 (Similarweb)"],
+      "speaker_notes": "เน้นช่องว่าง 35 เทียบ 13.6 — คนข้ามขั้นตอนค้นหาแบบเดิมไปเลย"
+    },
+    {
+      "id": "zero-click",
+      "type": "data-chart",
+      "purpose": "prove-the-stakes",
+      "message": "เมื่อ AI ตอบเอง การคลิกหายไปครึ่งหนึ่งของครึ่งหนึ่ง",
+      "eyebrow": "ความจริงแบบ zero-click",
+      "title": "อันดับ 1 แบบเดิม ไม่ปลอดภัยอีกต่อไป",
+      "layout_family": "chart",
+      "visual_strategy": "data-visualization",
+      "content": [
+        { "kind": "text", "text": "สามตัวเลขจากชุดข้อมูลใหญ่ของสหรัฐฯ — หน่วยเป็น % ของ metric ตัวเอง" }
+      ],
+      "chart_spec": {
+        "type": "column",
+        "title": "เมื่อ AI Overview ปรากฏ",
+        "data": {
+          "labels": ["Query ที่มี AI Overview", "การคลิกที่อันดับ 1 เสียไป", "Zero-click หลังมี AI"],
+          "series": [{ "name": "ร้อยละ", "values": [48, 58, 83] }],
+          "unit": "%"
+        },
+        "takeaway": "ครึ่งหนึ่งของหน้าจอผลลัพธ์เป็นคำตอบของ AI — ถ้าร้านไม่อยู่ในคำตอบ ร้านไม่ถูกเห็น",
+        "source": "Ahrefs / instantpress.co — research-notes §2 (2026-09-22)"
+      },
+      "sources": ["research-notes §2 (Ahrefs, instantpress.co)"],
+      "speaker_notes": "ย้ำข้อจำกัด: ตัวเลขตะวันตก ประมาณจากชุดข้อมูลใหญ่ ไม่ใช่สำมะโน — แต่ทิศทางชัด"
+    },
+    {
+      "id": "seo-vs-geo",
+      "type": "comparison",
+      "purpose": "define-by-contrast",
+      "message": "SEO สู้เพื่ออันดับ GEO สู้เพื่อการถูกอ้างอิง",
+      "eyebrow": "นิยามที่ใช้ได้จริง",
+      "title": "SEO กับ GEO ต่างกันตรงไหน",
+      "layout_family": "comparison",
+      "visual_strategy": "comparison-table",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "SEO", "title": "สู้เพื่ออันดับบนหน้าผลลัพธ์", "text": "เก็บคีย์เวิร์ด ทำลิงก์ ดันหน้าเว็บให้ขึ้น top-10 — เกมที่ต่อยอดได้จากที่ทำอยู่" },
+          { "label": "GEO", "title": "สู้เพื่อถูกอ้างอิงในคำตอบ AI", "text": "ทำให้ชื่อร้านปรากฏในคำตอบที่ AI เลือกพูด — เกมใหม่ที่เริ่มพร้อมกันได้กับคนใหญ่" }
+        ]}
+      ],
+      "sources": ["research-notes §3 (17-38% overlap = คนละเกม)"],
+      "speaker_notes": "จุดสำคัญ: หน้าที่ AI อ้างอิง มีแค่ 17-38% ที่อยู่ top-10 organic — อันดับดีไม่การันตีถูกพูดถึง"
+    },
+    {
+      "id": "what-ai-cites",
+      "type": "framework",
+      "purpose": "explain-mechanism",
+      "message": "AI เชื่อสิ่งที่คนอื่นพูดถึงคุณ มากกว่าสิ่งที่คุณพูดถึงตัวเอง",
+      "eyebrow": "กลไกการอ้างอิง",
+      "title": "AI เลือกอ้างอิงจากอะไร",
+      "layout_family": "framework-grid",
+      "visual_strategy": "svg-infographic",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "84%", "title": "Earned media", "text": "ข่าว รีวิว ฟอรัม — ไม่ใช่เว็บของแบรนด์เอง" },
+          { "label": "21%", "title": "Listicle จัดอันดับ", "text": "\"10 ร้านกาแฟที่ต้องลอง\" คือฟอร์แมตที่ถูกอ้างอิงมากที่สุด" },
+          { "label": "Top 3", "title": "YouTube · Reddit · Wikipedia", "text": "แหล่งอ้างอิงนอกเว็บองค์กรที่ AI ไว้ใจ" },
+          { "label": "+30-40%", "title": "เนื้อหามีสถิติ + แหล่งอ้าง", "text": "โอกาสถูกเห็นในคำตอบ AI สูงขึ้นเมื่อใส่ข้อมูลจริง" }
+        ]}
+      ],
+      "sources": ["research-notes §3 (Muck Rack, Princeton/Georgia Tech)"],
+      "speaker_notes": "สรุปเป็นประโยคเดียว: สิ่งที่พูดว่าคุณมีตัวตน สำคัญกว่าหน้าเว็บของคุณเอง"
+    },
+    {
+      "id": "stature-ladder",
+      "type": "data-chart",
+      "purpose": "set-expectations",
+      "message": "SME เริ่มที่ 11% — แต่ 11% ที่ตั้งใจ ชนะคนที่ไม่มีเลย",
+      "eyebrow": "บันไดชื่อเสียง",
+      "title": "ใครถูก AI พูดถึงบ้าง",
+      "layout_family": "chart",
+      "visual_strategy": "data-visualization",
+      "content": [
+        { "kind": "text", "text": "จากการวิเคราะห์คำตอบ AI กว่า 100,000 รายการ — โอกาสถูกพูดถึงขึ้นกับระดับความคุ้นเคินของชื่อ" }
+      ],
+      "chart_spec": {
+        "type": "column",
+        "title": "โอกาสปรากฏในคำตอบ AI ที่เกี่ยวข้อง (%)",
+        "data": {
+          "labels": ["แบรนด์ระดับโลก", "แบรนด์กลาง/ภูมิภาค", "แบรนด์เล็ก/ใหม่ (SME)"],
+          "series": [{ "name": "โอกาสถูกพูดถึง", "values": [73, 44, 11] }],
+          "unit": "%"
+        },
+        "takeaway": "ร้านเล็กเริ่มที่ 11% — เป้าหมายสมจริงคือแย่งส่วนแบ่งในกลุ่มผู้ชมของตัวเอง ไม่ใช่แข่งกับ Nike",
+        "source": "Ranqo tracker (100K+ คำตอบ) via arxiv.org/abs/2606.20065 — research-notes §4"
+      },
+      "sources": ["research-notes §4 (Ranqo)"],
+      "speaker_notes": "อย่าให้ 11% หดหั่น — ในจังหวัด/ชุมชนของคุณ คู่แข่งแทบไม่มีใครทำ GEO เลย"
+    },
+    {
+      "id": "start-where-you-are",
+      "type": "problem-solution",
+      "purpose": "remove-objection",
+      "message": "ไม่ต้องมีงบ PR ก้อนใหญ่ — เริ่มจากของที่ร้านมีอยู่แล้ว",
+      "eyebrow": "ข้อกังวลที่พบบ่อย",
+      "title": "ไม่มีงบ ไม่มีทีม เริ่มยังไง",
+      "layout_family": "problem-solution",
+      "visual_strategy": "comparison-table",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "กังวล", "title": "\"ต้องจ้างคนทำ PR ใหญ่ ๆ ไหม\"", "text": "งบจำกัด ไม่มีทีมคอนเทนต์ กลัวเสียเวลาโดยไม่เห็นผล" },
+          { "label": "ความจริง", "title": "เริ่มจากของที่มี: รีวิว ฟอรัม FAQ", "text": "84% ของการอ้างอิงมาจาก earned media — รีวิวลูกค้าจริงคือ earned media ที่ถูกที่สุดสำหรับ SME" }
+        ]}
+      ],
+      "sources": ["research-notes §3 (earned media 84%)"],
+      "speaker_notes": "เชื่อมกลับสไลด์กลไก: รีวิวลูกค้า = earned media = สิ่งที่ AI อ่าน"
+    },
+    {
+      "id": "week-one",
+      "type": "checklist",
+      "purpose": "enable-action",
+      "message": "5 ข้อที่ทำได้เองในสัปดาห์แรก",
+      "eyebrow": "เช็กลิสต์",
+      "title": "เริ่ม GEO สัปดาห์นี้",
+      "layout_family": "checklist",
+      "visual_strategy": "iconography",
+      "content": [
+        { "kind": "bullets", "items": [
+          "เช็กชื่อร้าน: ถาม ChatGPT/Gemini ถึงหมวดสินค้าของเรา ดูว่าร้านโผล่ไหม",
+          "ขอรีวิวจริง 5 รายการจากลูกค้าประจำ (ให้คะแนน + ข้อความ)",
+          "ตอบคำถามจริง 1 คำถามบนฟอรัม/กลุ่มที่ลูกค้าเราอยู่ — ไม่ขาย แค่ช่วย",
+          "เพิ่มหน้า FAQ ตอบคำถามที่ลูกค้าถามบ่อยสุด 5 ข้อ ด้วยประโยคตรง ๆ",
+          "ใส่ตัวเลขจริงของร้านในเนื้อหา (จำนวนลูกค้า ปีที่เปิด ราคาเริ่มต้น)"
+        ]},
+        { "kind": "callout", "title": "กฎข้อเดียวของสัปดาห์แรก", "text": "ทุกอย่างข้างบนใช้เวลารวมกันไม่เกิน 4 ชั่วโมง และไม่เสียเงิน", "tone": "positive" }
+      ],
+      "sources": ["research-notes §3 (สถิติ/FAQ/ฟอรัม = สิ่งที่ AI อ้างอิง)"],
+      "speaker_notes": "อ่านช้า ๆ ทีละข้อ ให้ผู้ฟังนับดูว่าทำได้กี่ข้อแล้ว"
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "purpose": "the-ask",
+      "message": "ถาม AI ถึงร้านคุณวันนี้ แล้วเริ่มข้อ 1",
+      "title": "เปิด AI ถามถึงร้านคุณ วันนี้",
+      "layout_family": "closing-cta",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "วันนี้", "title": "ถาม AI ถึงหมวดสินค้าของเรา", "text": "จดว่า AI ตอบชื่อร้านไหน — นั่นคือคู่แข่งตัวจริงบน AI" },
+          { "label": "สัปดาห์นี้", "title": "ทำข้อ 1-2 ของเช็กลิสต์", "text": "เช็กชื่อ + เก็บรีวิว 5 รายการ" },
+          { "label": "เดือนหน้า", "title": "ทบทวนอีกครั้ง", "text": "ถามคำถามเดิม ดูว่าร้านโผล่หรือยัง — วัดผลง่าย ๆ ด้วยตัวเอง" }
+        ]}
+      ],
+      "sources": ["research-notes §4 (sentiment แกว่ง 6.7x — ต้องเช็กต่อเนื่อง)"],
+      "speaker_notes": "ปิดด้วยการชวนลองทำจริงตรงนั้น: เปิดโทรศัพท์ถาม AI เลยก็ได้"
+    }
+  ]
+}

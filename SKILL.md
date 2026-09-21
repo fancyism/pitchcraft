@@ -19,13 +19,16 @@ slides. ONE SLIDE = ONE PRIMARY COMMUNICATION JOB. Code renders; you direct.
 
 ```
 python scripts/validate_deck.py <ws>/output/deck.json --report <ws>/output/qa-report.md
+python scripts/check_fonts.py <ws>/output/deck.json --root <ws>   # font strategy (v2)
 python scripts/render_html.py <ws>/output/deck.json --root <ws> -o <ws>/output/deck.html
 node scripts/export_pptx.mjs <ws>/output/deck.json      # optional; npm i pptxgenjs
 ```
 
 Workspace convention (any subset; Phase 0 discovers what exists):
-`sources/ fonts/ brand/ references/ assets/ data/ output/` + optional
-`templates/deck.config.yaml` (see `templates/deck.config.yaml`).
+`sources/ fonts/ brand/ references/ assets/ data/ output/` +
+`config/` (deck.config.yaml, brand.yaml, design-rules.md,
+style-presets/) + `templates/` (DSL presets per layout family) —
+copy from `templates/workspace/` to bootstrap a new workspace.
 
 ## Pipeline — run in order, checkpoint artifacts into output/
 
@@ -42,15 +45,20 @@ Workspace convention (any subset; Phase 0 discovers what exists):
    pitch / advise / teach); write the emotional arc. `references/methods.md`.
 5. **Phase 4 Slide plan** — per slide: id, beat, layout family, visual
    strategy, ONE-sentence message, source refs -> `output/slide-plan.md`.
+   Start each slide from its template preset in `templates/` when present
+   (title, framework, comparison, timeline, data, closing).
 6. **Phase 5 DSL** — serialize to `output/deck.json` per
    `schemas/deck.schema.json`; authoring guide in
    `references/slide-dsl.md`; layout choice table in
    `references/taxonomy.md`. Validate — zero FAILs before rendering.
-7. **Phase 6 Theme + assets** — compile brand/ + fonts/ into tokens
-   (`references/brand-tokens.md`, `references/typography.md`); charts from
-   real data; images only where information design can't do the job
-   (`references/visual-strategy.md`). Thai decks: line-height >= 1.25, no
-   negative tracking.
+7. **Phase 6 Theme + assets** — resolve `metadata.style_preset` from
+   `config/style-presets/`, then overlay `config/brand.yaml` (or
+   brand/palette.json) and `config/design-rules.md`; compile fonts via
+   `check_fonts.py` (chain: preferred -> embed -> safe stack -> PDF
+   canonical; Thai PPTX maps to Leelawadee UI). Charts from real data;
+   images only where information design can't do the job
+   (`references/visual-strategy.md`). Thai decks: line-height >= 1.25,
+   no negative tracking.
 8. **Phase 7 Render** — commands above.
 9. **Phase 8 QA loop** — screenshot every slide; inspect against
    `references/qa.md` (visual + content + deck-level); repair until no
@@ -82,4 +90,6 @@ defect -> repair at content or token level, never per-slide hacks.
 
 `references/pipeline.md` · `slide-dsl.md` · `taxonomy.md` ·
 `visual-strategy.md` · `typography.md` · `brand-tokens.md` · `qa.md` ·
-`methods.md` — full worked example: `examples/pitchcraft-demo/`.
+`methods.md` — worked examples: `examples/pitchcraft-demo/` (EN) ·
+`examples/geo-sme-thai/` (Thai, custom font + config workspace). Changes:
+`CHANGELOG.md`. Stories: `docs/stories/`.

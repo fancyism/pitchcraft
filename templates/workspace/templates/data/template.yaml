@@ -1,0 +1,22 @@
+# DSL preset: data/chart family
+family: data-chart
+layout_family: chart
+visual_strategy: data-visualization
+density: medium
+defaults:
+  eyebrow: ""
+  chart_spec:
+    type: column         # bar|column|line|area|donut|stacked-bar|funnel
+    title: ""
+    data:
+      labels: []
+      series:
+        - name: ""
+          values: []
+    takeaway: ""         # the one sentence the chart proves
+    source: ""           # REQUIRED on-slide provenance
+hints: >-
+  Trend->line/area; comparison->bar/column; composition->stacked/donut
+  (<=5 slices); stages->funnel; single headline number->big-number layout
+  instead. Values from data/ or a cited source; never invented. KPI
+  variant: metrics block + optional chart via layout kpi-dashboard.

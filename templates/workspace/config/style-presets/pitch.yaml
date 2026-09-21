@@ -1,0 +1,19 @@
+# Style preset: pitch — bold, confident, fast-reading
+name: pitch
+colors:
+  primary: "#14213D"
+  secondary: "#8D99AE"
+  accent: "#FCA311"
+  surface: "#FFFFFF"
+  surface_alt: "#F5F5F4"
+  text: "#101418"
+  text_muted: "#57606A"
+  border: "#E2E4E7"
+typography:
+  line_height_body: 1.5
+  display_weight: 800
+  title_size: 48   # big statements carry the deck
+guidance: >-
+  Statement slides and big numbers do the persuading; minimal bullets;
+  one metric per claim; closing CTA oversized. Fits fundraising, sales
+  pitches, launch decks.

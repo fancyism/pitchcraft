@@ -1,0 +1,19 @@
+# Style preset: editorial — premium magazine feel, warm paper, one accent
+name: editorial
+colors:
+  primary: "#254741"
+  secondary: "#7A8B99"
+  accent: "#C46A2F"
+  surface: "#FAF7F2"
+  surface_alt: "#F1ECE3"
+  text: "#201D1A"
+  text_muted: "#6B645B"
+  border: "#E3DCD0"
+typography:
+  line_height_body: 1.55
+  display_weight: 800
+  title_size: 44
+guidance: >-
+  Long measure titles, generous whitespace, typography-led hierarchy.
+  Photography optional; information design first. Fits consulting decks,
+  brand stories, executive narratives.

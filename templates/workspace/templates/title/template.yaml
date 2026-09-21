@@ -1,0 +1,16 @@
+# DSL preset: title/cover family
+family: cover
+layout_family: cover
+visual_strategy: typography-only
+density: sparse
+defaults:
+  eyebrow: ""            # small tracked label above the title
+  subtitle: ""           # one-line promise of the deck
+  meta: [audience]       # cover-foot chips
+skeleton:
+  - kind: text
+    text: ""             # one support line max; often omit
+hints: >-
+  The cover states the deck's promise, not its topic. Dark ink background
+  by default; optional background asset with a scrim and 42%+ safe area.
+  Display type 54-76px. No bullets on a cover.

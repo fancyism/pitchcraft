@@ -1,0 +1,40 @@
+# PitchCraft workspace configuration (v2)
+# Copy config/ templates/ fonts/ into your project workspace and adjust.
+# Every key is optional — Phase 2 infers missing values from sources.
+
+deck:
+  title: ""
+  audience: ""         # who is in the room; drives vocabulary and density
+  objective: ""
+  desired_action: ""
+  style_preset: "editorial"   # editorial | consulting | data | pitch | educational (config/style-presets/)
+  language: "en"      # BCP-47; "th" enables Thai typography rules + Thai-safe PPTX fonts
+  aspect_ratio: "16:9"
+  length: 12
+
+outputs:
+  - html
+  - pptx              # needs: npm i pptxgenjs
+  - pdf               # print mode of deck.html via headless chrome
+  - previews
+
+fonts:
+  directory: "fonts"  # scanned by scripts/check_fonts.py
+  strategy: auto      # auto = embed in HTML, map safe stack in PPTX, PDF as canonical
+  # Variable fonts: set weight range "100 900" in theme.typography.custom_fonts
+
+brand:
+  file: "config/brand.yaml"     # palette, type mapping, logo rules
+  # or palette.json in brand/ — either compiles to theme tokens (Phase 6)
+
+design_rules: "config/design-rules.md"   # deck-specific rules the agent must obey
+
+templates: "templates"   # DSL presets per layout family (agent-consumed)
+
+qa:
+  visual: true
+  content: true
+  ai_judgments: false   # optional TypeSafe pass; needs TYPESAFE_API_KEY
+
+sourcing:
+  web_verify: true      # verify market/competitive claims against live sources

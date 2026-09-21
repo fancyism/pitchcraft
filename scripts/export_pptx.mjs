@@ -33,8 +33,11 @@ const C = Object.assign(
   },
   theme.colors && Object.fromEntries(Object.entries(theme.colors).map(([k, v]) => [k, String(v).replace("#", "")]))
 );
-const FONT_D = "Verdana";
-const FONT_B = "Verdana";
+// Font strategy (spec §10): PPTX cannot assume recipients own custom fonts.
+// Thai decks map to a Thai-capable system stack; see scripts/check_fonts.py.
+const THAI = String(deck.metadata.language || "en").toLowerCase().startsWith("th");
+const FONT_D = THAI ? "Leelawadee UI" : "Verdana";
+const FONT_B = THAI ? "Leelawadee UI" : "Verdana";
 
 const pptx = new PptxGenJS();
 pptx.defineLayout({ name: "W169", width: 13.333, height: 7.5 });

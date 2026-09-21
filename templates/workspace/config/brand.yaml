@@ -1,0 +1,39 @@
+# Brand definition — compiles to PitchCraft theme tokens in Phase 6.
+# Alternative: place palette.json in brand/ with the same color keys.
+
+identity:
+  name: ""
+  tagline: ""
+
+colors:            # all optional; unset keys fall back to the style preset
+  primary: ""      # main brand ink / emphasis
+  secondary: ""
+  accent: ""       # single attention color — eyebrows, bullets, takeaways
+  surface: ""      # slide background
+  surface_alt: ""  # cards / panels
+  text: ""
+  text_muted: ""
+  border: ""
+
+typography:
+  display: ""      # font family or stack for display/headline roles
+  body: ""
+  mono: ""
+  line_height_body: 1.55   # Thai decks: >= 1.25 enforced by the renderer
+  # custom_fonts are embedded (base64) into deck.html by render_html.py:
+  # custom_fonts:
+  #   - family: "Anuphan"
+  #     path: "fonts/Anuphan.ttf"
+  #     weight: "100 900"     # variable font weight range
+
+logo:
+  file: "brand/logo.svg"
+  placement: [cover, closing]   # only, unless guidelines say otherwise
+  clear_space: "cap-height on all sides"
+  on_image: "never without a scrim"
+
+icons:
+  directory: "brand/icons"
+  style: "outline 1.5px, single accent color"
+
+photography: "one idea per image, natural light, consistent warmth; credit required"

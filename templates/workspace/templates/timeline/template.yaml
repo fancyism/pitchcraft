@@ -1,0 +1,17 @@
+# DSL preset: timeline family
+family: timeline
+layout_family: timeline
+visual_strategy: timeline
+density: medium
+defaults:
+  eyebrow: ""
+skeleton:
+  - kind: steps
+    items:               # 3-6 nodes; label = time marker
+      - label: ""        # Q1, เดือนที่ 3, 2027...
+        title: ""
+        text: ""
+hints: >-
+  Chronology must be real (labels ordered). The message states what the
+  sequence PROVES or UNLOCKS, not that time exists. Roadmap variant uses
+  layout_family roadmap with lanes instead of nodes.

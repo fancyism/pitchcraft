@@ -1,0 +1,19 @@
+# Style preset: data — dashboard clarity, chart-first slides
+name: data
+colors:
+  primary: "#0F4C5C"
+  secondary: "#9A8C98"
+  accent: "#E36414"
+  surface: "#FBFBF9"
+  surface_alt: "#EFF2F0"
+  text: "#172026"
+  text_muted: "#5C6B73"
+  border: "#DCE4E1"
+typography:
+  line_height_body: 1.5
+  display_weight: 800
+  title_size: 38   # shorter titles leave room for charts
+guidance: >-
+  One chart one message; direct labels over legends; takeaway callout on
+  every chart slide; KPI rows before detail. Fits performance reviews,
+  research readouts, analytics decks.

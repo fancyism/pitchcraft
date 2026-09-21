@@ -1,0 +1,17 @@
+# DSL preset: framework family
+family: framework
+layout_family: framework-grid
+visual_strategy: svg-infographic
+density: medium
+defaults:
+  eyebrow: ""
+skeleton:
+  - kind: steps
+    items:               # 2-6 parts; each = one component of the model
+      - label: ""        # short tag e.g. L1, phase code
+        title: ""        # component name
+        text: ""         # what it answers/does, one line
+hints: >-
+  One framework per slide; the slide message states what the framework
+  ANSWERS (e.g. "ทุก Framework ตอบคำถามธุรกิจหนึ่งข้อ"). Parts must be
+  parallel in grammar and scale. 6+ parts -> split or use two slides.

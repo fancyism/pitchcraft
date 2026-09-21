@@ -1,0 +1,26 @@
+{
+  "source_files": [
+    { "id": "notes", "path": "sources/research-notes.md", "note": "GEO/AI-search facts, web-verified 2026-09-22 ทุกตัวเลขมี URL" }
+  ],
+  "external_sources": [
+    { "id": "similarweb", "via": "omnibound.ai", "url": "https://www.omnibound.ai/blog/generative-engine-optimization-statistics", "facts": ["35% ใช้ AI ตอนค้นพบสินค้า", "13.6% ใช้เสิร์ชเดิมเท่านั้น"] },
+    { "id": "g2", "via": "gracker.ai", "url": "https://gracker.ai/data-and-research/", "facts": ["40-50% B2B เริ่มที่แชตบอท"] },
+    { "id": "ahrefs", "via": "instantpress.co", "url": "https://www.instantpress.co/aeo-statistics", "facts": ["AI Overview 25-48% ของ query", "อันดับ 1 เสียคลิก ~58%", "zero-click ~83%", "84% citation จาก earned media (Muck Rack)", "17-38% overlap กับ top-10"] },
+    { "id": "ranqo", "via": "arxiv.org/abs/2606.20065", "url": "https://arxiv.org/abs/2606.20065", "facts": ["บันได 73/44/11", "sentiment แกว่ง ~6.7 เท่า", "listicle ~21% ของ citation"] },
+    { "id": "princeton-gt", "via": "geoaura.world", "url": "https://geoaura.world/blog/geo-statistics-latest-data", "facts": ["สถิติ+อ้างอิงหลัก → visibility +30-40%"] }
+  ],
+  "claims": [
+    { "slide": "cover", "claim": "ตัวเลขจริงพร้อมแหล่งอ้างอิงทุกตัว", "source": "notes", "loc": "ทั้งไฟล์" },
+    { "slide": "thirty-five", "claim": "35% / 13.6%", "source": "similarweb", "loc": "§1" },
+    { "slide": "zero-click", "claim": "48 / 58 / 83 (สาม metric ต่างชนิด ระบุบนสไลด์)", "source": "ahrefs + instantpress", "loc": "§2" },
+    { "slide": "seo-vs-geo", "claim": "17-38% overlap", "source": "ahrefs", "loc": "§3" },
+    { "slide": "what-ai-cites", "claim": "84% / 21% / top sources / +30-40%", "source": "ahrefs + ranqo + princeton-gt", "loc": "§3" },
+    { "slide": "stature-ladder", "claim": "73 / 44 / 11", "source": "ranqo", "loc": "§4" },
+    { "slide": "start-where-you-are", "claim": "earned media 84%", "source": "ahrefs (Muck Rack)", "loc": "§3" },
+    { "slide": "cta", "claim": "ต้องเช็กต่อเนื่อง (6.7x)", "source": "ranqo", "loc": "§4" }
+  ],
+  "limitations": [
+    "ตัวเลขส่วนใหญ่วัดจากตลาดสหรัฐฯ/ยุโรป — ใช้เป็นแนวโน้ม ไม่ใช่ตัวเลขไทย (ระบุใน speaker notes ของสไลด์ข้อมูล)",
+    "zero-click เป็นการประมาณจากชุดข้อมูลใหญ่ ไม่ใช่สำมะโน (ระบุบนสไลด์)"
+  ]
+}

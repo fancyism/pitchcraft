@@ -1,0 +1,28 @@
+# Brand definition — examples/geo-sme-thai
+# Demo brand: PitchCraft Thai editorial (no client assets in this workspace)
+
+identity:
+  name: "PitchCraft"
+  tagline: "สื่อสารให้ตรงใจ ถึงคน ถึงเครื่องมือ AI"
+
+colors: {}   # inherit editorial style preset (config template at templates/workspace/config/style-presets/editorial.yaml)
+
+typography:
+  display: "'Anuphan', 'Noto Sans Thai', 'Leelawadee UI', sans-serif"
+  body: "'Anuphan', 'Noto Sans Thai', 'Leelawadee UI', sans-serif"
+  mono: "'Cascadia Code', Consolas, monospace"
+  line_height_body: 1.6   # Thai: หัวเรื่องมีวรรณยุกต์ ต้องการที่หายใจมากกว่า 1.55
+  custom_fonts:
+    - family: "Anuphan"
+      path: "fonts/Anuphan.ttf"
+      weight: "100 900"   # variable font — full weight axis
+
+logo:
+  file: ""                # no logo in this demo; text lockup only
+  placement: []
+
+icons:
+  directory: ""
+  style: ""
+
+photography: "none — typography + information design only (visual-strategy decision order)"

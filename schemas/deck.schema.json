@@ -14,7 +14,7 @@
       "properties": {
         "title": { "type": "string", "minLength": 1 },
         "subtitle": { "type": "string" },
-        "audience": { "type": "string", "description": "Who is in the room." },
+        "style_preset": { "type": "string", "description": "Style preset used (editorial|consulting|data|pitch|educational) from config/style-presets/ — the resolved tokens live in theme." },
         "objective": { "type": "string", "description": "What the deck must achieve." },
         "desired_action": { "type": "string", "description": "What the audience should do after." },
         "tone": { "type": "string" },

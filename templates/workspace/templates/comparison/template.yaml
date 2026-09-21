@@ -1,0 +1,21 @@
+# DSL preset: comparison family
+family: comparison
+layout_family: comparison
+visual_strategy: comparison-table
+density: medium
+defaults:
+  eyebrow: ""
+skeleton:
+  - kind: steps
+    items:
+      - label: ""        # left side tag (option, before, problem)
+        title: ""
+        text: ""
+      - label: ""        # right side tag
+        title: ""
+        text: ""
+hints: >-
+  Exactly two sides; label both with the SAME kind of tag. The message
+  states the verdict or the axis of difference — never "a comparison".
+  Before/after uses layout_family before-after; problem/solution uses
+  problem-solution. Same skeleton, different badge.

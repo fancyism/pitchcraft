@@ -7,19 +7,25 @@
 <link rel="canonical" href="https://fancyism.github.io/pitchcraft/examples/pitchcraft-demo/output/deck.html"/>
 <style>
 html,body{height:100%;margin:0;display:flex;align-items:center;justify-content:center;background:#FAF7F2;color:#201D1A;font-family:"Segoe UI",Arial,sans-serif;text-align:center}
-main{max-width:560px;padding:40px}
+main{max-width:640px;padding:40px}
 h1{font-size:34px;margin:0 0 12px}
 p{line-height:1.6;color:#6B645B}
 a{color:#C46A2F;font-weight:700}
 code{background:#F1ECE3;padding:2px 8px;border-radius:6px;font-size:14px}
+.demos{display:flex;gap:16px;justify-content:center;margin:18px 0}
+.demos a{display:block;background:#F1ECE3;border:1px solid #E3DCD0;border-radius:12px;padding:14px 18px;text-decoration:none;color:#201D1A;font-weight:600}
+.demos span{display:block;font-size:13px;color:#6B645B;font-weight:400;margin-top:4px}
 </style>
 </head>
 <body>
 <main>
 <h1>PitchCraft</h1>
-<p>Marketing presentation engine for AI agents — sources, brand, fonts, data in; validated Slide DSL and rendered deck out.</p>
-<p><a href="examples/pitchcraft-demo/output/deck.html">Open the demo deck →</a> (this deck was built by PitchCraft)</p>
-<p>Install: <code>npx skills add fancyism/pitchcraft</code></p>
+<p>Point your AI agent at a folder of sources. Get a marketing deck with a validated structure, real sources on every number, and a QA loop that catches broken slides before your audience does.</p>
+<div class="demos">
+<a href="examples/pitchcraft-demo/output/deck.html">English demo<span>built by PitchCraft, from its own spec</span></a>
+<a href="examples/geo-sme-thai/output/deck.html">Thai demo · ไทย<span>Anuphan font, GEO for SMEs</span></a>
+</div>
+<p>Install in any agent: <code>npx skills add fancyism/pitchcraft</code></p>
 </main>
 </body>
 </html>
