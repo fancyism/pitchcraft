@@ -1,0 +1,24 @@
+{
+  "source_files": [
+    { "id": "spec", "path": "sources/pitchcraft-spec.md", "note": "Distilled 2026-09-20 from the full PitchCraft production spec (33 sections + final mandate)" },
+    { "id": "schemas", "path": "../schemas/slide.schema.json", "note": "Enum counts: 31 slide types, 22 layout families, 16 visual strategies, 7 chart types (counted 2026-09-20)" },
+    { "id": "readme", "path": "../README.md", "note": "Install command, repo identity" },
+    { "id": "qa-ref", "path": "../references/qa.md", "note": "TypeSafe optional judgment pass" }
+  ],
+  "claims": [
+    { "slide": "cover", "claim": "engine turns workspace into deck", "source": "spec", "loc": "§1 primary objective" },
+    { "slide": "the-tell", "claim": "stereotypical AI deck patterns", "source": "spec", "loc": "§30 design quality bar" },
+    { "slide": "three-seconds", "claim": "3-second rule / one job per slide", "source": "spec", "loc": "§2 core design principle" },
+    { "slide": "bullets-vs-system", "claim": "bullets-on-slides vs communication system", "source": "spec", "loc": "§2" },
+    { "slide": "bullets-vs-system", "claim": "pipeline ordering", "source": "spec", "loc": "§3" },
+    { "slide": "six-layers", "claim": "six-layer moat", "source": "spec", "loc": "§33 + Final Mandate" },
+    { "slide": "pipeline", "claim": "ten phases + output artifacts", "source": "spec", "loc": "§3, §23" },
+    { "slide": "coverage", "claim": "31/22/16/7 counts", "source": "schemas", "loc": "enum fields" },
+    { "slide": "before-after", "claim": "bad pattern list; PASS/WARNING/FAIL gate", "source": "spec", "loc": "§30, §19-21" },
+    { "slide": "proof", "claim": "demo built by pipeline on its own spec", "source": "spec", "loc": "§33 (working skill)" },
+    { "slide": "proof", "claim": "metrics 12/6/0/100%", "source": "qa-ref + this output dir", "loc": "qa-report.md, deck.json" },
+    { "slide": "mandate", "claim": "quote text", "source": "spec", "loc": "Final Mandate (verbatim)" },
+    { "slide": "ships-today", "claim": "formats + DSL portability + optional AI QA", "source": "spec + qa-ref", "loc": "§4, §23; references/qa.md" },
+    { "slide": "cta", "claim": "install command", "source": "readme", "loc": "Install section" }
+  ]
+}

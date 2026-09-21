@@ -1,0 +1,271 @@
+{
+  "metadata": {
+    "title": "PitchCraft — Marketing Presentation Engine",
+    "audience": "Marketing teams and AI-agent builders",
+    "objective": "Position PitchCraft as the engine that replaces bullet-dump AI decks",
+    "desired_action": "Install the skill and run it on a workspace",
+    "tone": "expert but accessible",
+    "style": "premium editorial consulting",
+    "language": "en",
+    "aspect_ratio": "16:9",
+    "source_provenance": "output/sources-map.json"
+  },
+  "theme": {
+    "colors": {
+      "primary": "#254741", "secondary": "#7A8B99", "accent": "#C46A2F",
+      "surface": "#FAF7F2", "surface_alt": "#F1ECE3",
+      "text": "#201D1A", "text_muted": "#6B645B", "border": "#E3DCD0"
+    },
+    "typography": {
+      "line_height_body": 1.55
+    }
+  },
+  "narrative": {
+    "structure": "Problem -> Insight -> Solution -> Product -> Proof -> Ask",
+    "arc": [
+      "hook: name the engine",
+      "tension: AI decks are easy to spot",
+      "stakes: 3 seconds, one job",
+      "problem -> solution: dump vs system",
+      "solution: six layers",
+      "product: the ten-phase pipeline",
+      "product: intent does the choosing",
+      "contrast: same agent, different system",
+      "proof: this deck is the demo",
+      "belief: the mandate",
+      "enablement: what ships today",
+      "ask: point your agent at a workspace"
+    ]
+  },
+  "slides": [
+    {
+      "id": "cover",
+      "type": "cover",
+      "purpose": "hook-open",
+      "message": "PitchCraft turns a workspace into a marketing-grade deck.",
+      "eyebrow": "Agent skill · Marketing decks",
+      "title": "PitchCraft",
+      "subtitle": "The marketing presentation engine — sources, brand, fonts and data in; validated, art-directed deck out.",
+      "layout_family": "cover",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "text", "text": "Built, validated and QA-looped by the engine it describes." }
+      ],
+      "sources": ["README.md"],
+      "speaker_notes": "Open cold: every AI team can generate slides; almost none can generate a deck. PitchCraft is the difference."
+    },
+    {
+      "id": "the-tell",
+      "type": "big-statement",
+      "purpose": "name-the-problem",
+      "message": "AI decks are easy to generate — and easy to spot.",
+      "title": "AI decks are easy to generate — and easy to spot.",
+      "layout_family": "statement",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "text", "text": "Giant title. Three generic bullets. The same card grid, five slides running. Unsourced numbers. That is what 'prompt, bullets, slides' produces — and audiences have learned to see it." }
+      ],
+      "sources": ["spec §30 (design quality bar)"],
+      "speaker_notes": "Let the sentence sit. Everyone in the room has sat through this deck."
+    },
+    {
+      "id": "three-seconds",
+      "type": "big-number",
+      "purpose": "set-the-stake",
+      "message": "A slide lands its idea in ~3 seconds or it fails.",
+      "title": "3 seconds",
+      "layout_family": "big-number",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "metrics", "items": [
+          { "value": "3s", "label": "to land a slide's core idea — the 3-second rule behind every layout decision" }
+        ]},
+        { "kind": "text", "text": "One slide = one primary communication job. The job lives in the Slide DSL as a written message; if the sentence cannot be written, the slide is not designed yet." }
+      ],
+      "sources": ["spec §2 (core design principle)"],
+      "speaker_notes": "The DSL enforces the message field — this is a structural guarantee, not a style hope."
+    },
+    {
+      "id": "bullets-vs-system",
+      "type": "problem-solution",
+      "purpose": "contrast-approaches",
+      "message": "Bullets-on-slides is a content dump; a deck is a communication system.",
+      "eyebrow": "The real difference",
+      "title": "Content dump vs communication system",
+      "layout_family": "problem-solution",
+      "visual_strategy": "comparison-table",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "Problem", "title": "Prompt → bullets → slides", "text": "No story spine, no provenance, no QA. The tool fills space; the message never lands." },
+          { "label": "Solution", "title": "Workspace → story → system → QA", "text": "Ingest sources with provenance, pick a narrative spine, serialize a validated Slide DSL, render, then inspect-repair until nothing FAILs." }
+        ]}
+      ],
+      "sources": ["spec §2", "spec §3 (pipeline)"],
+      "speaker_notes": "The left column is a workflow; the right column is an engine. Same model, different system."
+    },
+    {
+      "id": "six-layers",
+      "type": "framework",
+      "purpose": "explain-engine",
+      "message": "Six engine layers turn material into argument.",
+      "eyebrow": "The engine",
+      "title": "Six layers, one moat",
+      "layout_family": "framework-grid",
+      "visual_strategy": "svg-infographic",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "L1", "title": "Source intelligence", "text": "Claims extracted with provenance; never fabricated" },
+          { "label": "L2", "title": "Story intelligence", "text": "Narrative spine plus a designed emotional arc" },
+          { "label": "L3", "title": "Slide DSL", "text": "Content separated from rendering; one format, many outputs" },
+          { "label": "L4", "title": "Visual strategy", "text": "16 treatments chosen by intent, never decorative" },
+          { "label": "L5", "title": "Multi-renderer", "text": "HTML, PPTX and PDF from the same deck.json" },
+          { "label": "L6", "title": "Visual QA loop", "text": "Inspect, repair, re-render until nothing FAILs" }
+        ]}
+      ],
+      "sources": ["spec §33 + Final Mandate (the core moat)"],
+      "speaker_notes": "Any one layer is a nice-to-have; the six together are the moat."
+    },
+    {
+      "id": "pipeline",
+      "type": "process",
+      "purpose": "show-discipline",
+      "message": "Ten phases, zero skipped steps, checkpoint artifacts in output/.",
+      "eyebrow": "How it runs",
+      "title": "The ten-phase pipeline",
+      "layout_family": "process-flow",
+      "visual_strategy": "process-flow",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "P0", "title": "Discover", "text": "Workspace inventory + tool check" },
+          { "label": "P1", "title": "Ingest", "text": "Extract claims + provenance" },
+          { "label": "P2-3", "title": "Story", "text": "Brief, spine, emotional arc" },
+          { "label": "P4-5", "title": "Plan & DSL", "text": "slide-plan → deck.json, validated" },
+          { "label": "P6-7", "title": "Theme & render", "text": "Tokens, assets, HTML/PPTX" },
+          { "label": "P8-9", "title": "QA & export", "text": "Inspect-repair loop, previews" }
+        ]}
+      ],
+      "sources": ["spec §3 (pipeline)", "spec §23 (output structure)"],
+      "speaker_notes": "Nothing renders before the plan validates — that ordering is the whole trick."
+    },
+    {
+      "id": "coverage",
+      "type": "data-chart",
+      "purpose": "prove-breadth",
+      "message": "The taxonomy does the choosing — layouts picked by intent, never random.",
+      "eyebrow": "v1 contracts",
+      "title": "Intent does the choosing",
+      "layout_family": "chart",
+      "visual_strategy": "data-visualization",
+      "content": [
+        { "kind": "text", "text": "31 semantic slide types map onto 22 renderer layouts and 16 visual strategies; charts draw from 7 types keyed to analytical purpose." }
+      ],
+      "chart_spec": {
+        "type": "column",
+        "title": "What ships in the v1 contracts (counted from schemas)",
+        "data": {
+          "labels": ["Slide types", "Layout families", "Visual strategies", "Chart types"],
+          "series": [{ "name": "Count", "values": [31, 22, 16, 7] }]
+        },
+        "takeaway": "A taxonomy this wide means the layout follows the slide's job — the model never free-styles structure.",
+        "source": "schemas/slide.schema.json — counted 2026-09-20"
+      },
+      "sources": ["schemas/slide.schema.json"],
+      "speaker_notes": "These are countable facts from the repo's schema enums — not marketing numbers."
+    },
+    {
+      "id": "before-after",
+      "type": "before-after",
+      "purpose": "sharpen-contrast",
+      "message": "Same agent, different system: quality is structural.",
+      "eyebrow": "Before / after",
+      "title": "Same agent, different system",
+      "layout_family": "before-after",
+      "visual_strategy": "comparison-table",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "Before", "title": "Generated filler", "text": "Giant titles · generic bullets · repeated card grids · unsourced numbers · no QA gate · nothing editable" },
+          { "label": "After", "title": "Art-directed system", "text": "One job per slide · intent-chosen layouts · on-slide sources · PASS/WARNING/FAIL gate · deck.json stays editable" }
+        ]}
+      ],
+      "sources": ["spec §30", "spec §19-21 (QA loops)"],
+      "speaker_notes": "The right column is not effort — it is structure. The gate makes the floor the minimum."
+    },
+    {
+      "id": "proof",
+      "type": "case-study",
+      "purpose": "prove-it-works",
+      "message": "This deck is the demo — built by the engine it pitches.",
+      "eyebrow": "Proof",
+      "title": "The deck is the demo",
+      "layout_family": "case-study",
+      "visual_strategy": "structured-cards",
+      "content": [
+        { "kind": "text", "text": "Challenge: prove the engine publicly, on itself." },
+        { "kind": "bullets", "items": [
+          "Approach: this deck runs the full pipeline on its own specification",
+          "Sources: every claim cites a section of the distilled spec",
+          "Design: default editorial tokens, information design only — no generated images"
+        ]},
+        { "kind": "metrics", "items": [
+          { "value": "12", "label": "slides, one job each" },
+          { "value": "6", "label": "narrative beats" },
+          { "value": "0", "label": "FAILs at export" },
+          { "value": "100%", "label": "claims with provenance" }
+        ]}
+      ],
+      "sources": ["spec §33 (a working skill, not documentation)", "output/qa-report.md"],
+      "speaker_notes": "Dogfooding as evidence: the artifacts in output/ are the audit trail — slide-plan, sources-map, qa-report."
+    },
+    {
+      "id": "mandate",
+      "type": "quote",
+      "purpose": "state-the-belief",
+      "message": "An engine, not a one-off generator.",
+      "title": "The mandate",
+      "layout_family": "quote",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "quote", "text": "Build this as a reusable AI presentation engine, not a one-off slide generator.", "attribution": "PitchCraft specification — Final Mandate" }
+      ],
+      "sources": ["spec Final Mandate"],
+      "speaker_notes": "The spec's own words. This is the standard the repo holds itself to."
+    },
+    {
+      "id": "ships-today",
+      "type": "roadmap",
+      "purpose": "enable-adoption",
+      "message": "HTML, PPTX, PDF and the DSL ship today.",
+      "eyebrow": "Ships today",
+      "title": "What you can run with",
+      "layout_family": "roadmap",
+      "visual_strategy": "timeline",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "Now", "title": "Render + export", "text": "Self-contained deck.html; editable PPTX (pptxgenjs); PDF via print mode; preview PNGs feed the QA loop" },
+          { "label": "Now", "title": "The deck's DNA", "text": "deck.json is the source of truth — re-render any format, any time, from the same DSL" },
+          { "label": "Optional", "title": "Calibrated AI QA", "text": "TypeSafe Score/Noul judgments advise the QA loop when an API key is present — humans keep the final PASS" }
+        ]}
+      ],
+      "sources": ["spec §4 (DSL)", "spec §23 (outputs)", "references/qa.md"],
+      "speaker_notes": "Adoption is one command; the DSL means you are never locked into one renderer."
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "purpose": "the-ask",
+      "message": "Point your agent at a workspace and say the word.",
+      "title": "Point your agent at a workspace and say the word.",
+      "layout_family": "closing-cta",
+      "visual_strategy": "typography-only",
+      "content": [
+        { "kind": "steps", "items": [
+          { "label": "Install", "title": "npx skills add kanomwhandev/pitchcraft", "text": "Any skills-compatible agent" },
+          { "label": "Run", "title": "\"Create a 12-slide deck from this workspace\"", "text": "Audience, goal, style — the pipeline does the rest" },
+          { "label": "Keep", "title": "deck.json stays yours", "text": "The DSL is the deliverable; formats are views" }
+        ]}
+      ],
+      "sources": ["README.md (install)"],
+      "speaker_notes": "Close on the command. The next deck they see should be theirs."
+    }
+  ]
+}

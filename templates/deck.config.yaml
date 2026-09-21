@@ -1,0 +1,35 @@
+# PitchCraft workspace configuration
+# Copy to your project root next to sources/ brand/ fonts/ and adjust.
+# Every key is optional — Phase 2 infers missing values from sources and asks
+# only for what changes the deck materially.
+
+deck:
+  title: ""            # e.g. "Why GEO Beats SEO for SMEs"
+  audience: ""         # who is in the room; drives vocabulary and density
+  objective: ""        # what the deck must achieve
+  desired_action: ""   # what the audience should do next
+  style: "premium editorial consulting"
+  language: "en"       # BCP-47; Thai decks keep line-height >= 1.25
+  aspect_ratio: "16:9"
+  length: 12           # target slide count; agent may challenge it
+
+outputs:               # pick any subset; HTML+JSON always produced
+  - html
+  - pptx               # needs: npm i pptxgenjs
+  - pdf                # print mode of deck.html via headless browser
+  - previews           # slide PNGs for the QA loop
+
+theme:                 # overrides tokens discovered from brand/
+  colors: {}
+  typography: {}
+  # custom_fonts:
+  #   - family: "Acme Display"
+  #     path: "fonts/acme-display.woff2"
+
+qa:
+  visual: true         # inspect renders; repair FAILs before export
+  content: true        # one message per slide, provenance, density
+  ai_judgments: false  # optional TypeSafe pass; needs TYPESAFE_API_KEY
+
+sourcing:
+  web_verify: false    # research-family rule: verify claims via web before slide

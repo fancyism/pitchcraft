@@ -1,0 +1,14 @@
+{
+  "name": "pitchcraft",
+  "version": "1.0.0",
+  "description": "Marketing presentation engine for AI agents — sources in, validated Slide DSL and rendered decks out",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanomwhandev/pitchcraft"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/kanomwhandev/pitchcraft/schemas/deck.schema.json",
+  "title": "PitchCraft Deck DSL",
+  "description": "Canonical intermediate representation. Content is separated from presentation rendering so a deck stays portable across HTML, PPTX, PDF and image renderers. Validate with scripts/validate_deck.py (stdlib-only) or any JSON Schema tooling.",
+  "type": "object",
+  "required": ["metadata", "theme", "slides"],
+  "additionalProperties": false,
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["title", "language", "aspect_ratio"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string" },
+        "audience": { "type": "string", "description": "Who is in the room." },
+        "objective": { "type": "string", "description": "What the deck must achieve." },
+        "desired_action": { "type": "string", "description": "What the audience should do after." },
+        "tone": { "type": "string" },
+        "style": { "type": "string", "description": "e.g. premium editorial consulting, startup strategy deck." },
+        "language": { "type": "string", "description": "BCP-47 tag, e.g. en, th, th-EN-mixed." },
+        "aspect_ratio": { "enum": ["16:9"] },
+        "source_provenance": { "type": "string", "description": "Where deck sources live, e.g. sources-map.json." }
+      }
+    },
+    "theme": { "$ref": "slide.schema.json#/definitions/theme" },
+    "narrative": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "structure": { "type": "string", "description": "Named narrative spine, e.g. Problem -> Insight -> Evidence -> Solution -> Action." },
+        "arc": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "One entry per slide: the beat it plays in the story."
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "slide.schema.json" }
+    }
+  }
+}
